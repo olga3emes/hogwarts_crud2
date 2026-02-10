@@ -35,6 +35,6 @@ class HouseService {
   //Eliminar
 
   Future<void> deleteHouse(String id) async {
-    await _db.from('wizards').delete().eq('id', id);
+    await _db.from('houses').delete().eq('id', id);
   }
 }

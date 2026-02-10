@@ -46,6 +46,10 @@ class _WandListScreenState extends State<WandListScreen> {
           }
           final wands = snapshot.data!;
 
+          if (wands.isEmpty) {
+            return const Center(child: Text('No hay varitas registradas'));
+          }
+
           return ListView.builder(
             itemCount: wands.length,
             itemBuilder: (context, index) {
